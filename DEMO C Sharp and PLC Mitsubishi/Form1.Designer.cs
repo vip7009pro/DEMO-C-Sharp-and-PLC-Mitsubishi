@@ -45,13 +45,16 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             this.button8 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(67, 12);
+            this.button1.Location = new System.Drawing.Point(123, 22);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 38);
+            this.button1.Size = new System.Drawing.Size(167, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "Connect";
             this.button1.UseVisualStyleBackColor = true;
@@ -59,9 +62,10 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(197, 12);
+            this.button2.Location = new System.Drawing.Point(361, 22);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 38);
+            this.button2.Size = new System.Drawing.Size(167, 70);
             this.button2.TabIndex = 1;
             this.button2.Text = "Disconnect";
             this.button2.UseVisualStyleBackColor = true;
@@ -69,9 +73,10 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(676, 128);
+            this.button3.Location = new System.Drawing.Point(1239, 236);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 29);
+            this.button3.Size = new System.Drawing.Size(167, 54);
             this.button3.TabIndex = 2;
             this.button3.Text = "Read";
             this.button3.UseVisualStyleBackColor = true;
@@ -79,44 +84,49 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(676, 191);
+            this.button4.Location = new System.Drawing.Point(1239, 353);
+            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 28);
+            this.button4.Size = new System.Drawing.Size(167, 52);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Write";
+            this.button4.Text = "Write Word";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtAdress
             // 
-            this.txtAdress.Location = new System.Drawing.Point(521, 137);
+            this.txtAdress.Location = new System.Drawing.Point(955, 253);
+            this.txtAdress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(113, 20);
+            this.txtAdress.Size = new System.Drawing.Size(204, 29);
             this.txtAdress.TabIndex = 4;
             // 
             // txtValue
             // 
-            this.txtValue.Location = new System.Drawing.Point(521, 199);
+            this.txtValue.Location = new System.Drawing.Point(955, 367);
+            this.txtValue.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtValue.Name = "txtValue";
             this.txtValue.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtValue.Size = new System.Drawing.Size(113, 20);
+            this.txtValue.Size = new System.Drawing.Size(204, 29);
             this.txtValue.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(422, 144);
+            this.label1.Location = new System.Drawing.Point(774, 266);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(71, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Địa chỉ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(422, 202);
+            this.label2.Location = new System.Drawing.Point(774, 373);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(62, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Giá trị";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -128,9 +138,10 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(676, 251);
+            this.button5.Location = new System.Drawing.Point(1239, 615);
+            this.button5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(91, 23);
+            this.button5.Size = new System.Drawing.Size(167, 42);
             this.button5.TabIndex = 8;
             this.button5.Text = "Xung lên";
             this.button5.UseVisualStyleBackColor = true;
@@ -138,9 +149,10 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(676, 293);
+            this.button6.Location = new System.Drawing.Point(1239, 693);
+            this.button6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 23);
+            this.button6.Size = new System.Drawing.Size(167, 42);
             this.button6.TabIndex = 8;
             this.button6.Text = "Xung xuống";
             this.button6.UseVisualStyleBackColor = true;
@@ -148,9 +160,10 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(34, 167);
+            this.button7.Location = new System.Drawing.Point(62, 308);
+            this.button7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(138, 42);
             this.button7.TabIndex = 9;
             this.button7.Text = "Start Timer";
             this.button7.UseVisualStyleBackColor = true;
@@ -158,9 +171,10 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(34, 217);
+            this.button8.Location = new System.Drawing.Point(62, 401);
+            this.button8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(138, 42);
             this.button8.TabIndex = 9;
             this.button8.Text = "Stop Timer";
             this.button8.UseVisualStyleBackColor = true;
@@ -169,26 +183,50 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 70);
+            this.label3.Location = new System.Drawing.Point(123, 129);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(117, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "CPU Name:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 104);
+            this.label4.Location = new System.Drawing.Point(123, 192);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.Size = new System.Drawing.Size(110, 25);
             this.label4.TabIndex = 10;
             this.label4.Text = "CPU Type:";
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(1239, 460);
+            this.button9.Margin = new System.Windows.Forms.Padding(6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(213, 52);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Write Double (Float)";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(1239, 147);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(213, 48);
+            this.button10.TabIndex = 11;
+            this.button10.Text = "Read Word (Float)";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1467, 831);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button8);
@@ -199,10 +237,12 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtValue);
             this.Controls.Add(this.txtAdress);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -228,6 +268,8 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 

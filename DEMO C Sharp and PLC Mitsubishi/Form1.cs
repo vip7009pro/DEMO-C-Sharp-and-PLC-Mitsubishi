@@ -30,7 +30,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            plc.ActLogicalStationNumber = 0;
+            plc.ActLogicalStationNumber = 1;
             plc.Open();
             string cpuname= "";
             int cputype;
@@ -51,6 +51,26 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             txtValue.Text = read_result.ToString();
         }
 
+        public int [] floatToWords(float value)
+        {
+            byte[] arr = BitConverter.GetBytes(value);
+            byte[] highWord = { arr[2], arr[3] };
+            byte[] lowWord = { arr[0], arr[1] };
+            int valueD1 = BitConverter.ToInt16(lowWord, 0);
+            int valueD3 = BitConverter.ToInt16(highWord, 0);
+            int[] returnValue = { valueD1, valueD3 };
+            return returnValue;
+
+        }
+        
+        public float wordsToFloat(int[] doubles)
+        {
+            byte[] highWordByte = BitConverter.GetBytes(doubles[1]);
+            byte[] lowWordByte = BitConverter.GetBytes(doubles[0]);
+            byte[] combineWordByte = { lowWordByte[0],lowWordByte[1], highWordByte[0], highWordByte[1] };
+            float value = BitConverter.ToSingle(combineWordByte, 0);
+            return value;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             plc.SetDevice(txtAdress.Text, Convert.ToInt16(txtValue.Text));
@@ -65,7 +85,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         private void button6_Click(object sender, EventArgs e)
         {
             plc.SetDevice(txtAdress.Text, Convert.ToInt16(1));
-            plc.SetDevice(txtAdress.Text, Convert.ToInt16(0));            
+            plc.SetDevice(txtAdress.Text, Convert.ToInt16(0));
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -83,6 +103,19 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         private void button8_Click(object sender, EventArgs e)
         {
             timer1.Stop();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            int[] wordsToWrite = floatToWords(float.Parse(txtValue.Text));
+            plc.WriteDeviceBlock(txtAdress.Text, 2,ref wordsToWrite[0]);           
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int[] arrayData = new int[2]; 
+            plc.ReadDeviceBlock(txtAdress.Text,2,out arrayData[0]);
+            txtValue.Text= wordsToFloat(arrayData).ToString();
         }
     }
 }
