@@ -18,8 +18,38 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             InitializeComponent();
         }
         public ActUtlType plc = new ActUtlType();
+
+        public struct VisionData {
+            public float speedInverter_Value;
+            public float delayTrigger_Value;
+            public float materialDiameter_Value;
+            public float p1p2Distance_Value;
+            public float pCountingforTrigger_Value;
+            public float speed_Value;
+            public float tactTime_Value;
+        }
+        VisionData vsd = new VisionData();
+        
+       
+        public float speedInverter_Value = 0f;
+        public float delayTrigger_Value = 0f;
+        public float materialDiameter_Value = 0f;
+        public float p1p2Distance_Value = 0f;
+        public int pCountingforTrigger_Value = 1;
+        public float speed_Value = 0f;
+        public float tactTime_Value = 0f;
+
+        public string speedInverter_Add = "R300";
+        public string delayTrigger_Add = "R62";
+        public string materialDiameter_Add = "R184";
+        public string p1p2Distance_Add = "R182";
+        public string pCountingforTrigger_Add = "D4000";
+        public string speed_Add = "R190";
+        public string tactTime_Add = "D61";
+
         private void label2_Click(object sender, EventArgs e)
         {
+            
 
         }
 
@@ -116,6 +146,14 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             int[] arrayData = new int[2]; 
             plc.ReadDeviceBlock(txtAdress.Text,2,out arrayData[0]);
             txtValue.Text= wordsToFloat(arrayData).ToString();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while(true)
+            {
+
+            }
         }
     }
 }
