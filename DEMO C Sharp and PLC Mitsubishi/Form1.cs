@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ActUtlTypeLib;
@@ -20,7 +21,8 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         }
         public ActUtlType plc = new ActUtlType();
 
-        public struct VisionData {
+        public struct VisionData
+        {
             public float speedInverter_Value;
             public float delayTrigger_Value;
             public float materialDiameter_Value;
@@ -30,8 +32,8 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             public float tactTime_Value;
         }
         VisionData vsd = new VisionData();
-        
-       
+
+
         public float speedInverter_Value = 0f;
         public float delayTrigger_Value = 0f;
         public float materialDiameter_Value = 0f;
@@ -50,7 +52,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -63,9 +65,9 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         {
             plc.ActLogicalStationNumber = 1;
             plc.Open();
-            string cpuname= "";
+            string cpuname = "";
             int cputype;
-            plc.GetCpuType(out cpuname, out cputype) ;
+            plc.GetCpuType(out cpuname, out cputype);
             label3.Text = "CPU Name: " + cpuname;
             label4.Text = "CPU Type: " + cputype;
             timer2.Start();
@@ -74,7 +76,10 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
 
         private void button2_Click(object sender, EventArgs e)
         {
+            timer2.Stop();
+            timer1.Stop();
             plc.Close();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -84,7 +89,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             txtValue.Text = read_result.ToString();
         }
 
-        public int [] floatToWords(float value)
+        public int[] floatToWords(float value)
         {
             byte[] arr = BitConverter.GetBytes(value);
             byte[] highWord = { arr[2], arr[3] };
@@ -95,12 +100,12 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             return returnValue;
 
         }
-        
+
         public float wordsToFloat(int[] doubles)
         {
             byte[] highWordByte = BitConverter.GetBytes(doubles[1]);
             byte[] lowWordByte = BitConverter.GetBytes(doubles[0]);
-            byte[] combineWordByte = { lowWordByte[0],lowWordByte[1], highWordByte[0], highWordByte[1] };
+            byte[] combineWordByte = { lowWordByte[0], lowWordByte[1], highWordByte[0], highWordByte[1] };
             float value = BitConverter.ToSingle(combineWordByte, 0);
             return value;
         }
@@ -141,19 +146,19 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         private void button9_Click(object sender, EventArgs e)
         {
             int[] wordsToWrite = floatToWords(float.Parse(txtValue.Text));
-            plc.WriteDeviceBlock(txtAdress.Text, 2,ref wordsToWrite[0]);           
+            plc.WriteDeviceBlock(txtAdress.Text, 2, ref wordsToWrite[0]);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            int[] arrayData = new int[2]; 
-            plc.ReadDeviceBlock(txtAdress.Text,2,out arrayData[0]);
-            txtValue.Text= wordsToFloat(arrayData).ToString();
+            int[] arrayData = new int[2];
+            plc.ReadDeviceBlock(txtAdress.Text, 2, out arrayData[0]);
+            txtValue.Text = wordsToFloat(arrayData).ToString();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            while(true)
+            while (true)
             {
                 int[] arrayData = new int[2];
                 //length speed
@@ -204,6 +209,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         private void button11_Click(object sender, EventArgs e)
         {
             plc.SetDevice("M855", Convert.ToInt16("1"));
+            Thread.Sleep(100);
             plc.SetDevice("M855", Convert.ToInt16("0"));
         }
 
@@ -232,6 +238,38 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             //tactimeValue
             plc.ReadDeviceBlock(tactTime_Add, 2, out arrayData[0]);
             lbTactTime.Text = wordsToFloat(arrayData).ToString();
+
+
+        }
+
+        private void btChangeSpeedInverter_Click(object sender, EventArgs e)
+        {
+            int[] wordsToWrite = floatToWords(float.Parse(tbSpeedInverter.Text));
+            plc.WriteDeviceBlock(speedInverter_Add, 2, ref wordsToWrite[0]);
+        }
+
+        private void btChangeDelayTrigger_Click(object sender, EventArgs e)
+        {
+            int[] wordsToWrite = floatToWords(float.Parse(tbDelayTrigger.Text));
+            plc.WriteDeviceBlock(delayTrigger_Add, 2, ref wordsToWrite[0]);
+        }
+
+        private void btMaterialDiameter_Click(object sender, EventArgs e)
+        {
+            int[] wordsToWrite = floatToWords(float.Parse(tbMaterialDiameter.Text));
+            plc.WriteDeviceBlock(materialDiameter_Add, 2, ref wordsToWrite[0]);
+        }
+
+        private void btP1P2Distance_Click(object sender, EventArgs e)
+        {
+            int[] wordsToWrite = floatToWords(float.Parse(tbP1P2Distance.Text));
+            plc.WriteDeviceBlock(p1p2Distance_Add, 2, ref wordsToWrite[0]);
+        }
+
+        private void btCountingForTrigger_Click(object sender, EventArgs e)
+        {           
+
+            plc.SetDevice(pCountingforTrigger_Add, Convert.ToInt16(tbcntfortrigger.Text));
 
         }
     }
