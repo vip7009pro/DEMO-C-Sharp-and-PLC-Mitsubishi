@@ -240,7 +240,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             lbTactTime.Text = wordsToFloat(arrayData).ToString();
 
 
-        }
+        }   
 
         private void btChangeSpeedInverter_Click(object sender, EventArgs e)
         {
