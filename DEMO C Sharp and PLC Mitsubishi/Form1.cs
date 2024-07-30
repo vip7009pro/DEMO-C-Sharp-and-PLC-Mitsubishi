@@ -41,6 +41,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         public int pCountingforTrigger_Value = 1;
         public float speed_Value = 0f;
         public float tactTime_Value = 0f;
+        public float captureDistanceAfterSensor_Value = 0f;
 
         public string speedInverter_Add = "R300";
         public string delayTrigger_Add = "R62";
@@ -49,6 +50,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         public string pCountingforTrigger_Add = "D4000";
         public string speed_Add = "R190";
         public string tactTime_Add = "D61";
+        public string captureDistanceAfterSensor_Add = "R180";
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -63,7 +65,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            plc.ActLogicalStationNumber = 1;
+            plc.ActLogicalStationNumber = int.Parse(tbStationNumber.Text);
             plc.Open();
             string cpuname = "";
             int cputype;
@@ -217,14 +219,23 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         {
             int[] arrayData = new int[2];
             //length speed
+            /*int read_speed;
+            plc.GetDevice(speed_Add, out read_speed);
+            lbSpeed.Text = read_speed.ToString();*/
+
             plc.ReadDeviceBlock(speed_Add, 2, out arrayData[0]);
             lbSpeed.Text = wordsToFloat(arrayData).ToString();
+
             //inverter speed
             plc.ReadDeviceBlock(speedInverter_Add, 2, out arrayData[0]);
             lbSpeedInverter.Text = wordsToFloat(arrayData).ToString();
-            //Delay trigger
-            plc.ReadDeviceBlock(delayTrigger_Add, 2, out arrayData[0]);
-            lbDelayTrigger.Text = wordsToFloat(arrayData).ToString();
+            //Delay trigger R62
+            int read_delayTrigger;
+            plc.GetDevice(delayTrigger_Add, out read_delayTrigger);
+            lbDelayTrigger.Text = (read_delayTrigger).ToString();
+
+           /* plc.ReadDeviceBlock(delayTrigger_Add, 2, out arrayData[0]);
+            lbDelayTrigger.Text = wordsToFloat(arrayData).ToString();*/
             //materialDiameter_Value
             plc.ReadDeviceBlock(materialDiameter_Add, 2, out arrayData[0]);
             lbMaterialDiaMeter.Text = wordsToFloat(arrayData).ToString();
@@ -236,8 +247,14 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             plc.GetDevice(pCountingforTrigger_Add, out read_result);
             lbCountingForTrigger.Text = read_result.ToString();
             //tactimeValue
-            plc.ReadDeviceBlock(tactTime_Add, 2, out arrayData[0]);
-            lbTactTime.Text = wordsToFloat(arrayData).ToString();
+
+            //Delay trigger
+            int read_tactTime;
+            plc.GetDevice(tactTime_Add, out read_tactTime);
+            lbTactTime.Text = read_tactTime.ToString();
+
+           /* plc.ReadDeviceBlock(tactTime_Add, 2, out arrayData[0]);
+            lbTactTime.Text = wordsToFloat(arrayData).ToString();*/
 
 
         }   
