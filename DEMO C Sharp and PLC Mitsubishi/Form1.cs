@@ -42,6 +42,8 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         public float speed_Value = 0f;
         public float tactTime_Value = 0f;
         public float captureDistanceAfterSensor_Value = 0f;
+        public int lamp1_Value = 0;
+        public int lamp2_Value = 0;
 
         public string speedInverter_Add = "R300";
         public string delayTrigger_Add = "R62";
@@ -51,6 +53,8 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         public string speed_Add = "R190";
         public string tactTime_Add = "D61";
         public string captureDistanceAfterSensor_Add = "R180";
+        public string lamp1_Add = "L10";
+        public string lamp2_Add = "L11";
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -253,9 +257,22 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             plc.GetDevice(tactTime_Add, out read_tactTime);
             lbTactTime.Text = read_tactTime.ToString();
 
-           /* plc.ReadDeviceBlock(tactTime_Add, 2, out arrayData[0]);
-            lbTactTime.Text = wordsToFloat(arrayData).ToString();*/
+            /* plc.ReadDeviceBlock(tactTime_Add, 2, out arrayData[0]);
+             lbTactTime.Text = wordsToFloat(arrayData).ToString();*/
 
+            //Lamp1
+            int read_lamp1;
+            plc.GetDevice(lamp1_Add, out read_lamp1);
+            lblamp_1.Text = read_lamp1.ToString();
+
+            //Lamp1
+            int read_lamp2;
+            plc.GetDevice(lamp2_Add, out read_lamp2);
+            lbLamp_2.Text = read_lamp2.ToString();
+
+            //Capture Distance After sensor
+            plc.ReadDeviceBlock(captureDistanceAfterSensor_Add, 2, out arrayData[0]);
+            lbCaptureDistanceAfterSensor.Text = wordsToFloat(arrayData).ToString();
 
         }   
 
@@ -288,6 +305,48 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
 
             plc.SetDevice(pCountingforTrigger_Add, Convert.ToInt16(tbcntfortrigger.Text));
 
+        }
+
+        private void btLamp1_Click(object sender, EventArgs e)
+        {
+            if(lblamp_1.Text == "1")
+            {
+                plc.SetDevice(lamp1_Add, Convert.ToInt16("0"));
+            }
+            else
+            {
+                plc.SetDevice(lamp1_Add, Convert.ToInt16("1"));
+            }
+           
+        }
+
+        private void btLamp2_Click(object sender, EventArgs e)
+        {
+            if(lbLamp_2.Text == "1")
+            {
+                plc.SetDevice(lamp2_Add, Convert.ToInt16("0"));
+            }
+            else
+            {
+                plc.SetDevice(lamp2_Add, Convert.ToInt16("1"));
+            }
+            
+        }
+
+        private void btTactTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btSpeed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btCaptureDistanceAfterSensor_Click(object sender, EventArgs e)
+        {
+            int[] wordsToWrite = floatToWords(float.Parse(tbCaptureDistanceAfterSensor.Text));
+            plc.WriteDeviceBlock(captureDistanceAfterSensor_Add, 2, ref wordsToWrite[0]);
         }
     }
 }

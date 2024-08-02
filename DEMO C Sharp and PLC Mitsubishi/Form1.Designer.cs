@@ -89,6 +89,21 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.tbLamp1 = new System.Windows.Forms.TextBox();
+            this.lbLamp1 = new System.Windows.Forms.Label();
+            this.lblamp_1 = new System.Windows.Forms.Label();
+            this.btLamp1 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tbLamp2 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbLamp_2 = new System.Windows.Forms.Label();
+            this.btLamp2 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tbCaptureDistanceAfterSensor = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lbCaptureDistanceAfterSensor = new System.Windows.Forms.Label();
+            this.btCaptureDistanceAfterSensor = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -274,7 +289,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // tbSpeedInverter
             // 
-            this.tbSpeedInverter.Location = new System.Drawing.Point(217, 214);
+            this.tbSpeedInverter.Location = new System.Drawing.Point(291, 214);
             this.tbSpeedInverter.Margin = new System.Windows.Forms.Padding(2);
             this.tbSpeedInverter.Name = "tbSpeedInverter";
             this.tbSpeedInverter.Size = new System.Drawing.Size(67, 20);
@@ -293,7 +308,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // tbDelayTrigger
             // 
-            this.tbDelayTrigger.Location = new System.Drawing.Point(217, 240);
+            this.tbDelayTrigger.Location = new System.Drawing.Point(291, 240);
             this.tbDelayTrigger.Margin = new System.Windows.Forms.Padding(2);
             this.tbDelayTrigger.Name = "tbDelayTrigger";
             this.tbDelayTrigger.Size = new System.Drawing.Size(67, 20);
@@ -312,7 +327,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // tbMaterialDiameter
             // 
-            this.tbMaterialDiameter.Location = new System.Drawing.Point(217, 265);
+            this.tbMaterialDiameter.Location = new System.Drawing.Point(291, 265);
             this.tbMaterialDiameter.Margin = new System.Windows.Forms.Padding(2);
             this.tbMaterialDiameter.Name = "tbMaterialDiameter";
             this.tbMaterialDiameter.Size = new System.Drawing.Size(67, 20);
@@ -320,7 +335,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // tbP1P2Distance
             // 
-            this.tbP1P2Distance.Location = new System.Drawing.Point(217, 291);
+            this.tbP1P2Distance.Location = new System.Drawing.Point(291, 291);
             this.tbP1P2Distance.Margin = new System.Windows.Forms.Padding(2);
             this.tbP1P2Distance.Name = "tbP1P2Distance";
             this.tbP1P2Distance.Size = new System.Drawing.Size(67, 20);
@@ -339,7 +354,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // tbcntfortrigger
             // 
-            this.tbcntfortrigger.Location = new System.Drawing.Point(217, 315);
+            this.tbcntfortrigger.Location = new System.Drawing.Point(291, 315);
             this.tbcntfortrigger.Margin = new System.Windows.Forms.Padding(2);
             this.tbcntfortrigger.Name = "tbcntfortrigger";
             this.tbcntfortrigger.Size = new System.Drawing.Size(67, 20);
@@ -358,7 +373,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // tbSpeed
             // 
-            this.tbSpeed.Location = new System.Drawing.Point(217, 341);
+            this.tbSpeed.Location = new System.Drawing.Point(291, 341);
             this.tbSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.tbSpeed.Name = "tbSpeed";
             this.tbSpeed.Size = new System.Drawing.Size(67, 20);
@@ -377,7 +392,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // tbTactTime
             // 
-            this.tbTactTime.Location = new System.Drawing.Point(217, 367);
+            this.tbTactTime.Location = new System.Drawing.Point(291, 367);
             this.tbTactTime.Margin = new System.Windows.Forms.Padding(2);
             this.tbTactTime.Name = "tbTactTime";
             this.tbTactTime.Size = new System.Drawing.Size(67, 20);
@@ -407,7 +422,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(422, 347);
+            this.button11.Location = new System.Drawing.Point(673, 432);
             this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(116, 35);
@@ -424,7 +439,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // lbSpeedInverter
             // 
             this.lbSpeedInverter.AutoSize = true;
-            this.lbSpeedInverter.Location = new System.Drawing.Point(144, 214);
+            this.lbSpeedInverter.Location = new System.Drawing.Point(186, 214);
             this.lbSpeedInverter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSpeedInverter.Name = "lbSpeedInverter";
             this.lbSpeedInverter.Size = new System.Drawing.Size(13, 13);
@@ -434,7 +449,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // lbDelayTrigger
             // 
             this.lbDelayTrigger.AutoSize = true;
-            this.lbDelayTrigger.Location = new System.Drawing.Point(144, 243);
+            this.lbDelayTrigger.Location = new System.Drawing.Point(186, 243);
             this.lbDelayTrigger.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDelayTrigger.Name = "lbDelayTrigger";
             this.lbDelayTrigger.Size = new System.Drawing.Size(13, 13);
@@ -444,7 +459,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // lbMaterialDiaMeter
             // 
             this.lbMaterialDiaMeter.AutoSize = true;
-            this.lbMaterialDiaMeter.Location = new System.Drawing.Point(144, 267);
+            this.lbMaterialDiaMeter.Location = new System.Drawing.Point(186, 267);
             this.lbMaterialDiaMeter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMaterialDiaMeter.Name = "lbMaterialDiaMeter";
             this.lbMaterialDiaMeter.Size = new System.Drawing.Size(13, 13);
@@ -454,7 +469,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // lbP1P2Distance
             // 
             this.lbP1P2Distance.AutoSize = true;
-            this.lbP1P2Distance.Location = new System.Drawing.Point(144, 291);
+            this.lbP1P2Distance.Location = new System.Drawing.Point(186, 291);
             this.lbP1P2Distance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbP1P2Distance.Name = "lbP1P2Distance";
             this.lbP1P2Distance.Size = new System.Drawing.Size(13, 13);
@@ -464,7 +479,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // lbCountingForTrigger
             // 
             this.lbCountingForTrigger.AutoSize = true;
-            this.lbCountingForTrigger.Location = new System.Drawing.Point(144, 315);
+            this.lbCountingForTrigger.Location = new System.Drawing.Point(186, 315);
             this.lbCountingForTrigger.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCountingForTrigger.Name = "lbCountingForTrigger";
             this.lbCountingForTrigger.Size = new System.Drawing.Size(13, 13);
@@ -474,7 +489,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // lbSpeed
             // 
             this.lbSpeed.AutoSize = true;
-            this.lbSpeed.Location = new System.Drawing.Point(144, 343);
+            this.lbSpeed.Location = new System.Drawing.Point(186, 343);
             this.lbSpeed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSpeed.Name = "lbSpeed";
             this.lbSpeed.Size = new System.Drawing.Size(13, 13);
@@ -484,7 +499,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // lbTactTime
             // 
             this.lbTactTime.AutoSize = true;
-            this.lbTactTime.Location = new System.Drawing.Point(144, 367);
+            this.lbTactTime.Location = new System.Drawing.Point(186, 367);
             this.lbTactTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTactTime.Name = "lbTactTime";
             this.lbTactTime.Size = new System.Drawing.Size(13, 13);
@@ -493,7 +508,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // btChangeSpeedInverter
             // 
-            this.btChangeSpeedInverter.Location = new System.Drawing.Point(301, 210);
+            this.btChangeSpeedInverter.Location = new System.Drawing.Point(375, 210);
             this.btChangeSpeedInverter.Margin = new System.Windows.Forms.Padding(2);
             this.btChangeSpeedInverter.Name = "btChangeSpeedInverter";
             this.btChangeSpeedInverter.Size = new System.Drawing.Size(57, 25);
@@ -504,7 +519,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // btChangeDelayTrigger
             // 
-            this.btChangeDelayTrigger.Location = new System.Drawing.Point(301, 236);
+            this.btChangeDelayTrigger.Location = new System.Drawing.Point(375, 236);
             this.btChangeDelayTrigger.Margin = new System.Windows.Forms.Padding(2);
             this.btChangeDelayTrigger.Name = "btChangeDelayTrigger";
             this.btChangeDelayTrigger.Size = new System.Drawing.Size(57, 25);
@@ -515,7 +530,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // btMaterialDiameter
             // 
-            this.btMaterialDiameter.Location = new System.Drawing.Point(301, 262);
+            this.btMaterialDiameter.Location = new System.Drawing.Point(375, 262);
             this.btMaterialDiameter.Margin = new System.Windows.Forms.Padding(2);
             this.btMaterialDiameter.Name = "btMaterialDiameter";
             this.btMaterialDiameter.Size = new System.Drawing.Size(57, 25);
@@ -526,7 +541,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // btP1P2Distance
             // 
-            this.btP1P2Distance.Location = new System.Drawing.Point(301, 287);
+            this.btP1P2Distance.Location = new System.Drawing.Point(375, 287);
             this.btP1P2Distance.Margin = new System.Windows.Forms.Padding(2);
             this.btP1P2Distance.Name = "btP1P2Distance";
             this.btP1P2Distance.Size = new System.Drawing.Size(57, 25);
@@ -537,7 +552,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // btCountingForTrigger
             // 
-            this.btCountingForTrigger.Location = new System.Drawing.Point(301, 310);
+            this.btCountingForTrigger.Location = new System.Drawing.Point(375, 310);
             this.btCountingForTrigger.Margin = new System.Windows.Forms.Padding(2);
             this.btCountingForTrigger.Name = "btCountingForTrigger";
             this.btCountingForTrigger.Size = new System.Drawing.Size(57, 25);
@@ -548,23 +563,25 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // 
             // btSpeed
             // 
-            this.btSpeed.Location = new System.Drawing.Point(301, 336);
+            this.btSpeed.Location = new System.Drawing.Point(375, 336);
             this.btSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.btSpeed.Name = "btSpeed";
             this.btSpeed.Size = new System.Drawing.Size(57, 25);
             this.btSpeed.TabIndex = 19;
             this.btSpeed.Text = "Change";
             this.btSpeed.UseVisualStyleBackColor = true;
+            this.btSpeed.Click += new System.EventHandler(this.btSpeed_Click);
             // 
             // btTactTime
             // 
-            this.btTactTime.Location = new System.Drawing.Point(301, 362);
+            this.btTactTime.Location = new System.Drawing.Point(375, 362);
             this.btTactTime.Margin = new System.Windows.Forms.Padding(2);
             this.btTactTime.Name = "btTactTime";
             this.btTactTime.Size = new System.Drawing.Size(57, 25);
             this.btTactTime.TabIndex = 19;
             this.btTactTime.Text = "Change";
             this.btTactTime.UseVisualStyleBackColor = true;
+            this.btTactTime.Click += new System.EventHandler(this.btTactTime_Click);
             // 
             // tbStationNumber
             // 
@@ -586,7 +603,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(163, 214);
+            this.label14.Location = new System.Drawing.Point(237, 214);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(20, 13);
             this.label14.TabIndex = 21;
@@ -595,7 +612,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(163, 242);
+            this.label15.Location = new System.Drawing.Point(237, 242);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 13);
             this.label15.TabIndex = 21;
@@ -604,7 +621,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(163, 265);
+            this.label16.Location = new System.Drawing.Point(237, 265);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(23, 13);
             this.label16.TabIndex = 21;
@@ -613,7 +630,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(163, 291);
+            this.label17.Location = new System.Drawing.Point(237, 291);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 13);
             this.label17.TabIndex = 21;
@@ -622,7 +639,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(163, 315);
+            this.label18.Location = new System.Drawing.Point(237, 315);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(21, 13);
             this.label18.TabIndex = 21;
@@ -631,7 +648,7 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(163, 344);
+            this.label19.Location = new System.Drawing.Point(237, 344);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(33, 13);
             this.label19.TabIndex = 21;
@@ -640,46 +657,208 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(163, 367);
+            this.label20.Location = new System.Drawing.Point(237, 367);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(47, 13);
             this.label20.TabIndex = 21;
             this.label20.Text = "seconds";
             // 
+            // tbLamp1
+            // 
+            this.tbLamp1.Location = new System.Drawing.Point(291, 396);
+            this.tbLamp1.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLamp1.Name = "tbLamp1";
+            this.tbLamp1.Size = new System.Drawing.Size(67, 20);
+            this.tbLamp1.TabIndex = 14;
+            // 
+            // lbLamp1
+            // 
+            this.lbLamp1.AutoSize = true;
+            this.lbLamp1.Location = new System.Drawing.Point(30, 396);
+            this.lbLamp1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbLamp1.Name = "lbLamp1";
+            this.lbLamp1.Size = new System.Drawing.Size(39, 13);
+            this.lbLamp1.TabIndex = 15;
+            this.lbLamp1.Text = "Lamp1";
+            this.lbLamp1.TextChanged += new System.EventHandler(this.Speed);
+            // 
+            // lblamp_1
+            // 
+            this.lblamp_1.AutoSize = true;
+            this.lblamp_1.Location = new System.Drawing.Point(186, 396);
+            this.lblamp_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblamp_1.Name = "lblamp_1";
+            this.lblamp_1.Size = new System.Drawing.Size(13, 13);
+            this.lblamp_1.TabIndex = 17;
+            this.lblamp_1.Text = "0";
+            // 
+            // btLamp1
+            // 
+            this.btLamp1.Location = new System.Drawing.Point(375, 391);
+            this.btLamp1.Margin = new System.Windows.Forms.Padding(2);
+            this.btLamp1.Name = "btLamp1";
+            this.btLamp1.Size = new System.Drawing.Size(57, 25);
+            this.btLamp1.TabIndex = 19;
+            this.btLamp1.Text = "Change";
+            this.btLamp1.UseVisualStyleBackColor = true;
+            this.btLamp1.Click += new System.EventHandler(this.btLamp1_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(237, 396);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(30, 13);
+            this.label23.TabIndex = 21;
+            this.label23.Text = "state";
+            // 
+            // tbLamp2
+            // 
+            this.tbLamp2.Location = new System.Drawing.Point(291, 419);
+            this.tbLamp2.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLamp2.Name = "tbLamp2";
+            this.tbLamp2.Size = new System.Drawing.Size(67, 20);
+            this.tbLamp2.TabIndex = 14;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(30, 419);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(39, 13);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Lamp2";
+            this.label21.TextChanged += new System.EventHandler(this.Speed);
+            // 
+            // lbLamp_2
+            // 
+            this.lbLamp_2.AutoSize = true;
+            this.lbLamp_2.Location = new System.Drawing.Point(186, 419);
+            this.lbLamp_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbLamp_2.Name = "lbLamp_2";
+            this.lbLamp_2.Size = new System.Drawing.Size(13, 13);
+            this.lbLamp_2.TabIndex = 17;
+            this.lbLamp_2.Text = "0";
+            // 
+            // btLamp2
+            // 
+            this.btLamp2.Location = new System.Drawing.Point(375, 414);
+            this.btLamp2.Margin = new System.Windows.Forms.Padding(2);
+            this.btLamp2.Name = "btLamp2";
+            this.btLamp2.Size = new System.Drawing.Size(57, 25);
+            this.btLamp2.TabIndex = 19;
+            this.btLamp2.Text = "Change";
+            this.btLamp2.UseVisualStyleBackColor = true;
+            this.btLamp2.Click += new System.EventHandler(this.btLamp2_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(237, 419);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(30, 13);
+            this.label24.TabIndex = 21;
+            this.label24.Text = "state";
+            // 
+            // tbCaptureDistanceAfterSensor
+            // 
+            this.tbCaptureDistanceAfterSensor.Location = new System.Drawing.Point(291, 447);
+            this.tbCaptureDistanceAfterSensor.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCaptureDistanceAfterSensor.Name = "tbCaptureDistanceAfterSensor";
+            this.tbCaptureDistanceAfterSensor.Size = new System.Drawing.Size(67, 20);
+            this.tbCaptureDistanceAfterSensor.TabIndex = 14;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(30, 447);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(150, 13);
+            this.label22.TabIndex = 15;
+            this.label22.Text = "Capture Distance After Sensor";
+            this.label22.TextChanged += new System.EventHandler(this.Speed);
+            // 
+            // lbCaptureDistanceAfterSensor
+            // 
+            this.lbCaptureDistanceAfterSensor.AutoSize = true;
+            this.lbCaptureDistanceAfterSensor.Location = new System.Drawing.Point(186, 447);
+            this.lbCaptureDistanceAfterSensor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCaptureDistanceAfterSensor.Name = "lbCaptureDistanceAfterSensor";
+            this.lbCaptureDistanceAfterSensor.Size = new System.Drawing.Size(13, 13);
+            this.lbCaptureDistanceAfterSensor.TabIndex = 17;
+            this.lbCaptureDistanceAfterSensor.Text = "0";
+            // 
+            // btCaptureDistanceAfterSensor
+            // 
+            this.btCaptureDistanceAfterSensor.Location = new System.Drawing.Point(375, 443);
+            this.btCaptureDistanceAfterSensor.Margin = new System.Windows.Forms.Padding(2);
+            this.btCaptureDistanceAfterSensor.Name = "btCaptureDistanceAfterSensor";
+            this.btCaptureDistanceAfterSensor.Size = new System.Drawing.Size(57, 25);
+            this.btCaptureDistanceAfterSensor.TabIndex = 19;
+            this.btCaptureDistanceAfterSensor.Text = "Change";
+            this.btCaptureDistanceAfterSensor.UseVisualStyleBackColor = true;
+            this.btCaptureDistanceAfterSensor.Click += new System.EventHandler(this.btCaptureDistanceAfterSensor_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(237, 447);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(23, 13);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "mm";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 484);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tbStationNumber);
+            this.Controls.Add(this.btLamp2);
+            this.Controls.Add(this.btLamp1);
             this.Controls.Add(this.btTactTime);
             this.Controls.Add(this.btSpeed);
             this.Controls.Add(this.btCountingForTrigger);
+            this.Controls.Add(this.btCaptureDistanceAfterSensor);
             this.Controls.Add(this.btP1P2Distance);
             this.Controls.Add(this.btMaterialDiameter);
+            this.Controls.Add(this.lbLamp_2);
             this.Controls.Add(this.btChangeDelayTrigger);
+            this.Controls.Add(this.lblamp_1);
             this.Controls.Add(this.btChangeSpeedInverter);
             this.Controls.Add(this.lbTactTime);
             this.Controls.Add(this.lbSpeed);
+            this.Controls.Add(this.lbCaptureDistanceAfterSensor);
             this.Controls.Add(this.lbCountingForTrigger);
             this.Controls.Add(this.lbP1P2Distance);
             this.Controls.Add(this.lbMaterialDiaMeter);
             this.Controls.Add(this.lbDelayTrigger);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.lbSpeedInverter);
+            this.Controls.Add(this.lbLamp1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.tbLamp2);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.tbLamp1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tbTactTime);
             this.Controls.Add(this.tbSpeed);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.tbcntfortrigger);
+            this.Controls.Add(this.tbCaptureDistanceAfterSensor);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbP1P2Distance);
             this.Controls.Add(this.label8);
@@ -776,6 +955,21 @@ namespace DEMO_C_Sharp_and_PLC_Mitsubishi
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox tbLamp1;
+        private System.Windows.Forms.Label lbLamp1;
+        private System.Windows.Forms.Label lblamp_1;
+        private System.Windows.Forms.Button btLamp1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox tbLamp2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbLamp_2;
+        private System.Windows.Forms.Button btLamp2;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox tbCaptureDistanceAfterSensor;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lbCaptureDistanceAfterSensor;
+        private System.Windows.Forms.Button btCaptureDistanceAfterSensor;
+        private System.Windows.Forms.Label label26;
     }
 }
 
